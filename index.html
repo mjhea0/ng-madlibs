@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="" lang="en">
+<html lang="en" ng-app="madLibs" >
 <head>
     <meta charset="UTF-8">
     <title>ngMadLibs</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body ng-controller="myCtrl">
 <div id="container">
     <div id="top">
         <img src="img/mad-lib-happy-face.png">
@@ -15,27 +15,28 @@
         Provide the following words:
         <br>
         <div class="choices">
-            <input type="text" class="form-control" ng-model="name" placeholder="name" required>
-            <input type="text" class="form-control" ng-model="job_title" placeholder="job title" required>
-            <input type="text" class="form-control" ng-model="tedious_task" placeholder="tedious task" required>
+            <input type="text" class="box" ng-model="template.name" placeholder="name" />
+            <input type="text" class="form-control" ng-model="template.job_title" placeholder="job title" />
+            <input type="text" class="form-control" ng-model="template.tedious_task" placeholder="tedious task" />
         </div>
         <div class="choices">
-            <input type="text" class="form-control" ng-model="dirty_task " placeholder="dirty task" required>
-            <input type="text" class="form-control" ng-model="celebrity" placeholder="celebrity" required>
-            <input type="text" class="form-control" ng-model="useless_skill" placeholder="useless skill" required>
+            <input type="text" class="form-control" ng-model="template.dirty_task " placeholder="dirty task" />
+            <input type="text" class="form-control" ng-model="template.celebrity" placeholder="celebrity" />
+            <input type="text" class="form-control" ng-model="template.useless_skill" placeholder="useless skill" />
         </div>
         <div class="choices">
-            <input type="text" class="form-control" ng-model="obnoxious_celebrity" placeholder="obnoxious celebrity" required>
-            <input type="text" class="form-control" ng-model="huge_number" placeholder="huge number" required>
-            <input type="text" class="form-control" ng-model="adjective" placeholder="adjective" required>
+            <input type="text" class="form-control" ng-model="template.obnoxious_celebrity" placeholder="obnoxious celebrity" />
+            <input type="text" class="form-control" ng-model="template.huge_number" placeholder="huge number" />
+            <input type="text" class="form-control" ng-model="template.adjective" placeholder="adjective" />
         </div>
     </div>
     <div id="story">
-        <p><span class="response">{{name}}</span> was a <span class="response">{{job_title}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="response"> {{tedious_task}}</span> and <span class="response">{{dirty_task}}</span>. So, <span class="response">{{name}}</span> met with her life mentor <span class="response">{{celebrity}}</span> who told her to learn how to <span class="response">{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="response">{{useless_skill}}</span> so she studied programming instead.</p>
+        <p><span class="response">{{template.name}}</span> was a <span class="response">{{template.job_title}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="response"> {{template.tedious_task}}</span> and <span class="response">{{template.dirty_task}}</span>. So, <span class="response">{{template.name}}</span> met with her life mentor <span class="response">{{template.celebrity}}</span> who told her to learn how to <span class="response">{{template.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="response">{{template.useless_skill}}</span> so she studied programming instead.</p>
  
-        <p>What a great decision! With her new skills, <span class="response">{{name}}</span> built a(n) <span class="response">{{adjective}} </span> robot named {{obnoxious_celebrity}} that not only loved <span class="response"> {{dirty_task}}</span> but did it <span class="response">{{huge_number}}</span> faster. </p>
+        <p>What a great decision! With her new skills, <span class="response">{{name}}</span> built a(n) <span class="response">{{template.adjective}} </span> robot named {{template.obnoxious_celebrity}} that not only loved <span class="response"> {{template.dirty_task}}</span> but did it <span class="response">{{template.huge_number}}</span> times faster. </p>
     </div>
 </div>
  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js" type="text/javascript"></script>
+ <script src="js/myapp.js" type="text/javascript"></script>
 </body>
 </html>
