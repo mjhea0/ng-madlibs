@@ -1,0 +1,25 @@
+/*div {
+    border-style: solid;
+}*/
+#container {
+    text-align: center;
+    width: 800px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#words, #top, #story {
+    border-style: solid;
+    padding: 30px 30px 30px;
+}
+#words .choices {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+}
+#words .choices input {
+    border-style: solid;
+    padding: 10px 10px 10px;
+    margin: 10px 10px 10px;
+}
