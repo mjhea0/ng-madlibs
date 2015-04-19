@@ -3,7 +3,7 @@
 }*/
 #container {
     text-align: center;
-    width: 800px;
+    width: 1000px;
     padding-left: 100px;
     padding-right: 100px;
     margin-left: auto;
@@ -22,6 +22,10 @@
     border-style: solid;
     padding: 10px 10px 10px;
     margin: 10px 10px 10px;
+}
+#words button {
+    margin-left: 500px;
+    padding: 10px 10px 10px;
 }
 .response {
     color: #009900;
