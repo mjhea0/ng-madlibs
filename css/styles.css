@@ -9,11 +9,17 @@
     margin-left: auto;
     margin-right: auto;
 }
+.small-img {
+    width: 100px;
+}
+.large-img {
+    width: 200px;
+}
 #words, #top, #story {
     border-style: solid;
     padding: 30px 30px 30px;
 }
-#words .choices {
+#words .col {
     display: inline-block;
     position: relative;
     width: 30%;
@@ -25,6 +31,7 @@
 }
 #words button {
     margin-left: 500px;
+    margin-top: 50px;
     padding: 10px 10px 10px;
 }
 .response {
