@@ -7,8 +7,12 @@ angular.module('madLibs', [])
     .controller('myCtrl', function($scope) {
         $scope.submit = function() {
             if ($scope.inputForm.$valid) {
+                console.log('valid');
                 $scope.result = 1;
                 console.log($scope.result);
+            }
+            else {
+                console.log('invalid');
             }
         };
         $scope.reset = function() {

@@ -18,22 +18,47 @@
             <br>
             <form name="inputForm" ng-submit="submit()" novalidate>
             <div class="col">
-                <input type="text" class="form-control" ng-model="name" placeholder="name" required />
-                <div ng-if="inputForm.$submitted && inputForm.name.$error.required">
+                <input type="text" class="form-control" name="name" ng-model="name" placeholder="name" required />
+               <!--  <div ng-if="inputForm.$submitted" ng-messages="inputForm.name.$error"> -->
+                <div ng-if="inputForm.$submitted && inputForm.name.$error">
+                    <span class="error" ng-message="required">Field is required!</span>
+          <!--       </div> -->
+                <!-- <input type="text" class="form-control" ng-model="job_title" placeholder="job title" required />
+                <div ng-if="inputForm.$submitted && inputForm.job_title.$error.required">
                     <span class="error" ng-message="required">Field is required!</span>
                 </div>
-                <input type="text" class="form-control" ng-model="job_title" placeholder="job title" required />
                 <input type="text" class="form-control" ng-model="tedious_task" placeholder="tedious task" required />
+                <div ng-if="inputForm.$submitted && inputForm.tedious_task.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div> -->
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <input type="text" class="form-control" ng-model="dirty_task " placeholder="dirty task" required />
+                <div ng-if="inputForm.$submitted && inputForm.dirty_task.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
                 <input type="text" class="form-control" ng-model="celebrity" placeholder="celebrity" required />
+                <div ng-if="inputForm.$submitted && inputForm.celebrity.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
                 <input type="text" class="form-control" ng-model="useless_skill" placeholder="useless skill" required />
+                <div ng-if="inputForm.$submitted && inputForm.useless_skill.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
             </div>
             <div class="col">
                 <input type="text" class="form-control" ng-model="obnoxious_celebrity" placeholder="obnoxious celebrity" required/>
+                <div ng-if="inputForm.$submitted && inputForm.obnoxious_celebrity.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
                 <input type="number" name="number" class="form-control" ng-model="huge_number" placeholder="huge number" required />
+                <div ng-if="inputForm.$submitted && inputForm.huge_number.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
                 <input type="text" class="form-control" ng-model="adjective" placeholder="adjective" required />
+                <div ng-if="inputForm.$submitted && inputForm.adjective.$error.required">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div> -->
             </div>
             <div><button type="submit" name="submit">Generate My Mad Lib</button></div>
             </form>
