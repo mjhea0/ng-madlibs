@@ -3,7 +3,7 @@ $(document).ready(function () {
     
 });
 
-angular.module('madLibs', [])
+angular.module('madLibs', ['ngMessages'])
     .controller('myCtrl', function($scope) {
         $scope.submit = function() {
             if ($scope.inputForm.$valid) {
