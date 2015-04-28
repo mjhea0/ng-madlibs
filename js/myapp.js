@@ -1,8 +1,3 @@
-$(document).ready(function () {
-    console.log("dom is ready!");
-    
-});
-
 angular.module('madLibs', ['ngMessages'])
     .controller('myCtrl', function($scope) {
         $scope.submit = function() {
